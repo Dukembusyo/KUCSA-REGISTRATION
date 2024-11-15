@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUCSA Cultural Week Registration</title>
+    <link rel="stylesheet" href="atyles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <h1>KUCSA Cultural Week 2024</h1>
+        <p>Register to join us on 28th December!</p>
+    </header>
+
+    <!-- Registration Form Section -->
+    <main>
+        <section class="registration-section">
+            <h2>Register for the Cultural Week</h2>
+            <p>Select your registration type and fill out the form below:</p>
+
+            <!-- Registration Type Selector -->
+            <div class="registration-type">
+                <button onclick="showForm('delegate')">Register as a Delegate</button>
+                <button onclick="showForm('participant')">Register as a Participant</button>
+                <button onclick="showForm('volunteer')">Register as a Volunteer</button>
+                <button onclick="showForm('partner')">Register as a Partner</button>
+            </div>
+
+            <!-- Delegate Registration Form -->
+            <form id="delegateForm" class="registration-form" style="display: none;">
+                <h3>Delegate Registration</h3>
+                <label for="delegateName">Full Name:</label>
+                <input type="text" id="delegateName" name="delegateName" required>
+
+                <label for="delegateEmail">Email:</label>
+                <input type="email" id="delegateEmail" name="delegateEmail" required>
+
+                <label for="delegateOrganization">Organization/Institution:</label>
+                <input type="text" id="delegateOrganization" name="delegateOrganization" required>
+
+                <label for="delegatePosition">Position:</label>
+                <input type="text" id="delegatePosition" name="delegatePosition" required>
+
+                <button type="submit" onclick="submitForm('delegateForm')">Submit Registration</button>
+            </form>
+
+            <!-- Participant Registration Form -->
+            <form id="participantForm" class="registration-form" style="display: none;">
+                <h3>Participant Registration</h3>
+                <label for="participantName">Full Name:</label>
+                <input type="text" id="participantName" name="participantName" required>
+
+                <label for="participantEmail">Email:</label>
+                <input type="email" id="participantEmail" name="participantEmail" required>
+
+                <label for="participantPhone">Phone Number:</label>
+                <input type="tel" id="participantPhone" name="participantPhone" required>
+
+                <button type="submit" onclick="submitForm('participantForm')">Submit Registration</button>
+            </form>
+
+            <!-- Volunteer Registration Form -->
+            <form id="volunteerForm" class="registration-form" style="display: none;">
+                <h3>Volunteer Registration</h3>
+                <label for="volunteerName">Full Name:</label>
+                <input type="text" id="volunteerName" name="volunteerName" required>
+
+                <label for="volunteerEmail">Email:</label>
+                <input type="email" id="volunteerEmail" name="volunteerEmail" required>
+
+                <label for="volunteerSkills">Skills:</label>
+                <input type="text" id="volunteerSkills" name="volunteerSkills" placeholder="e.g., event planning, photography" required>
+
+                <button type="submit" onclick="submitForm('volunteerForm')">Submit Registration</button>
+            </form>
+
+            <!-- Partner Registration Form -->
+            <form id="partnerForm" class="registration-form" style="display: none;">
+                <h3>Partner Registration</h3>
+                <label for="partnerName">Full Name:</label>
+                <input type="text" id="partnerName" name="partnerName" required>
+
+                <label for="partnerEmail">Email:</label>
+                <input type="email" id="partnerEmail" name="partnerEmail" required>
+
+                <label for="partnerOrganization">Organization Name:</label>
+                <input type="text" id="partnerOrganization" name="partnerOrganization" required>
+
+                <label for="partnerContribution">Contribution:</label>
+                <input type="text" id="partnerContribution" name="partnerContribution" placeholder="e.g., Sponsorship, equipment" required>
+
+                <button type="submit" onclick="submitForm('partnerForm')">Submit Registration</button>
+            </form>
+
+            <!-- Donation Section -->
+            <section id="donate" class="donate-section">
+                <h3>Support the Cultural Week Event</h3>
+                <p>Your contribution will help us create a memorable experience. Donate to support our mission.</p>
+                <label for="donationAmount">Donation Amount (KSH):</label>
+                <input type="number" id="donationAmount" name="donationAmount" placeholder="e.g., 1000">
+                <button onclick="makeDonation()">Donate</button>
+            </section>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 KUCSA. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
